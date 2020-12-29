@@ -1,14 +1,21 @@
 pipeline {
     agent any
+    tools {nodejs "Node 14 LTS"}
+
     stages {
         stage('Clone sources') {
             steps {
                 git branch: 'master', url: 'https://github.com/ifritzord/express-poc-sonarq'
             }
         }
+        stage('Install dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('SonarQube Server') {
                     sh "npm run quality"
                 }
             }

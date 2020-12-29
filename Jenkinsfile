@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tools {nodejs "Node 14 LTS"}
+    tools { nodejs "Node 14 LTS" }
 
     stages {
         stage('Clone sources') {

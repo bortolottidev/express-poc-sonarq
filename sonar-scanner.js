@@ -3,7 +3,7 @@ sonarqubeScanner(
     {
         serverUrl:  'http://sonarqube:9000',
         options : {
-            'sonar.login': '63787dfd065722c4cc35672de13f0ffbf4b17f6e',
+            'sonar.login': '234620a78b7afd823480c992c5ed2af2ccb03030',
             //'sonar.password': 'administrator',
             'sonar.sources':  'src',
             'sonar.tests':  'src',

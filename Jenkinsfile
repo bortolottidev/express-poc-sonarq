@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Clone sources') {
             steps {
-                git branch: 'bad-code', url: 'https://github.com/tkgregory/sonarqube-jacoco-code-coverage.git'
+                git branch: 'master', url: 'https://github.com/ifritzord/express-poc-sonarq'
             }
         }
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh "./gradlew sonarqube"
+                    sh "npm run quality"
                 }
             }
         }

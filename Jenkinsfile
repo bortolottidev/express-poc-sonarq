@@ -15,7 +15,7 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv(credentialsId: '63787dfd065722c4cc35672de13f0ffbf4b17f6e', installationName: 'SonarQube Server') {
+                withSonarQubeEnv(installationName: 'SonarQube Server') {
                     sh "npm run quality"
                 }
             }

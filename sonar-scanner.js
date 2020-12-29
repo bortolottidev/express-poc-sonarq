@@ -4,7 +4,7 @@ sonarqubeScanner(
         serverUrl:  'http://sonarqube:9000',
         options : {
             'sonar.login': 'admin',
-            'sonar.password': 'admin',
+            'sonar.password': 'administrator',
             'sonar.sources':  'src',
             'sonar.tests':  'src',
             'sonar.inclusions'  :  '**', // Entry point of your code
